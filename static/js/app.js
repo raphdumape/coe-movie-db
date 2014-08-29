@@ -57,7 +57,9 @@
         });
     }
 
-function movieBasic(id){
+function movieView(id){
+    $("movie-list").hide();
+    console.log(id);
     url = baseUrl + "movie/"+id;
     reqParam = {api_key:api_key};
     $.get(url,reqParam,function(response){
@@ -107,10 +109,10 @@ function movieBasic(id){
                var htmlStr = [
                             '<div class="col-md-4 portfolio-item">',
                                 '<a href="/movie/'+movie.id+'">',
-                                    '<img class="img-responsive movieinfo" src="' + imageSrc + '" alt="" style="width: 500; height:500;">',
+                                    '<img class="img-responsive movieinfo" src="' + imageSrc + '" alt="" style="width: 400; height:400;">',
                                 '</a>',
                                 '<h4>',
-                                    '<a href="/movie/'+movie.id+'">'+movie.title+'</a>',
+                                    '<center><a href="/movie/'+movie.id+'">'+movie.title+'</a></center>',
                                 '</h3>',
                             '</div>'
                             ];
