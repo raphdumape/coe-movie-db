@@ -57,9 +57,7 @@
         });
     }
 
-function movieView(id){
-    $("movie-list").hide();
-    console.log(id);
+function movieBasic(id){
     url = baseUrl + "movie/"+id;
     reqParam = {api_key:api_key};
     $.get(url,reqParam,function(response){
@@ -106,22 +104,18 @@ function movieView(id){
             
             data.results.forEach(function(movie){
             var imageSrc = config.images.base_url + config.images.poster_sizes[3] + movie.poster_path;
-               var htmlStr = [
-                            '<div class="col-md-4 portfolio-item">',
-                                '<a href="/movie/'+movie.id+'">',
-                                    '<img class="img-responsive movieinfo" src="' + imageSrc + '" alt="" style="width: 400; height:400;">',
-                                '</a>',
-                                '<h4>',
-                                    '<center><a href="/movie/'+movie.id+'">'+movie.title+'</a></center>',
-                                '</h3>',
-                            '</div>'
-                            ];
-            $('.movies-list').append($(htmlStr.join('')));
+               var object = {
+                    "movie-id" : movie.id,
+                    "img" : imageSrc,
+                    "title": movie.title
+               };
 
-            
-           });
-        
-    
+        var raw = $("#tpl-displaymovies").html();
+        var template = Handlebars.compile(raw);
+        var html = template(object);
+        $('.movies-list').append(html);
+
+           })();
         }
 
  

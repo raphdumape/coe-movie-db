@@ -1,9 +1,10 @@
 <html>
 <head>
    <title>Module 6 | Team 18</title>
-       <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
     <script src="/static/js/vendors/jquery.js"></script>
     <script src="/static/js/vendors/bootstrap.min.js"></script>
+    <script src="/static/js/vendors/handlebars.js"></script>
     <script src="/static/js/app.js"></script>
 </head>
 
@@ -38,11 +39,9 @@
             </div>
 
     <div class="container" style='top: 70px; position:relative; margin-bottom: 100px;'>
-        <div class='row movies-list'>
+            <div class="movies-list row"></div>  
 
-
-        </div><!-- /.row -->
-    </div><!-- /.container -->
+     </div>
 
 <hr class="col-lg-10 col-xs-push-1">
 
@@ -55,8 +54,23 @@
                 </div>
                 <!-- /.row -->
             </footer>
-        </div>
+       
 
+
+
+{% raw %}
+ <script type="text/x-handlebars-template" id="tpl-displaymovies" >
+                    <div class="col-md-4 portfolio-item" >
+                                <a href="/movie/{{movie-id}}">
+                            <img class="img-responsive movieinfo" src="{{img}}" alt="" style="width: 500; height:500;">
+                                </a>
+                                <h3>
+                                    <a href="/movie/{{movie-id}}">{{title}}</a>
+                                </h3>
+                               </div>
+        </script>
+     
+      {% endraw %}
 </body>
 
 </html>
