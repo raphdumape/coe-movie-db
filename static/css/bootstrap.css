@@ -14,6 +14,40 @@ html {
 body {
   margin: 0;
 }
+.modalposter{
+
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.modaltitle{
+
+  margin-left: 20px;
+}
+.modalover{
+  margin: -550px 20px 0 380px;
+  position:absolute;
+}
+.modalpic{
+  margin: -490px 20px 0 630px;
+  position:absolute;
+}
+.modaldir{
+  margin: -220px 20px 0 630px;
+  position:absolute;
+}
+.modaltag{
+  margin: -330px 20px 0 380px;
+  position:absolute;
+}
+
+.modalgenre{
+  margin: -210px 20px 0 380px;
+  position:absolute;
+}
+.modalvideo{
+  margin: 20px;
+  
+}
 article,
 aside,
 details,
@@ -46,6 +80,11 @@ template {
 a {
   background: transparent;
 }
+.lineblock{
+
+  display: inline-block;
+  display: inline;
+}
 a:active,
 a:hover {
   outline: 0;
@@ -56,6 +95,27 @@ abbr[title] {
 b,
 strong {
   font-weight: bold;
+}
+.movielist{
+  margin: 20px;
+}
+
+.myimg{
+  background-size: cover; 
+  -webkit-filter: grayscale(80%);
+  border: 5px solid #66d9ef;
+}
+.poster{
+
+  width: 120px; 
+  height:150px;
+  margin: -187px 0 0 10px; 
+  position:absolute;
+  border: 5px solid #f2cccc;
+}
+.links{
+  margin: -80px 0 0 140px;
+   position:absolute;
 }
 dfn {
   font-style: italic;
@@ -86,6 +146,7 @@ sub {
 }
 img {
   border: 0;
+  display: block;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -134,6 +195,11 @@ input[type="submit"] {
 button[disabled],
 html input[disabled] {
   cursor: default;
+}
+.mainUL{
+
+  margin: -60px 0 0 100px;
+   position:absolute;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -1382,10 +1448,10 @@ pre code {
   overflow-y: scroll;
 }
 .container {
+  margin-left: 65px;
   margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .container {
@@ -1530,7 +1596,7 @@ pre code {
   left: 16.66666667%;
 }
 .col-xs-push-1 {
-  left: 6.33333333%;
+  left: 4.33333333%;
 }
 .col-xs-push-0 {
   left: auto;
@@ -1752,7 +1818,7 @@ pre code {
     width: 66.66666667%;
   }
   .col-md-7 {
-    width: 58.33333333%;
+    width: 55.33333333%;
   }
   .col-md-6 {
     width: 50%;
@@ -5465,7 +5531,7 @@ button.close {
 }
 @media (min-width: 992px) {
   .modal-lg {
-    width: 900px;
+    width: 80%;
   }
 }
 .tooltip {
